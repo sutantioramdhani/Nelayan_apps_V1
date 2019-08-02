@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/RL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <EditText
+            android:id="@+id/search_barang"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:hint="Search (coming soon)" />
+
+        <ImageView
+            android:id="@+id/chart"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/search_barang"
+            android:src="@drawable/ic_shopping_cart"
+            android:tint="@color/biru1" />
+
+        <ImageView
+            android:id="@+id/Chat_beranda"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/chart"
+            android:src="@drawable/ic_chat"
+            android:tint="@color/biru1" />
+
+        <ImageView
+            android:id="@+id/notifikasi_beranda"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/Chat_beranda"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/biru1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/RL_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RL2"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView_Banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/TV_ikan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/RecyclerView_Banner"
+            android:background="@color/abu3"
+            android:text="Ikan"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView_Barang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/TV_ikan"
+            android:padding="10dp" />
+
+    </LinearLayout>
+</RelativeLayout>
